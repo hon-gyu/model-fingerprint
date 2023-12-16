@@ -1,3 +1,5 @@
+from typing import List
+
 import pandas as pd
 import numpy as np
 from sklearn.inspection import partial_dependence
@@ -35,7 +37,16 @@ class ModelFingerprint:
         fig.update_layout(title='Pairwise Effects', xaxis_title='Feature Pair', yaxis_title='Effect')
         fig.show()
     
-    def explain(self, model, explained_data, feature_names, grid_resolution=50, pairwise_combinations=None):
+    def explain(self, model, explained_data: np.array, feature_names: List[str], grid_resolution: int=50, pairwise_combinations: None|List[tuple]=None):
+        """
+
+        Args:
+            model: any model with sklearn-like API. PyTorch models could be wrapped with skorch.
+            explained_data: data used to explain the model
+            feature_names: list of feature names
+            grid_resolution: the number of points that are used to generate the partial dependence plot for each feature
+            pairwise_combinations: list of tuples of feature names for which the pairwise effect is computed
+        """
         self.feature_names = feature_names
 
         pairwise_combinations = pairwise_combinations or []
