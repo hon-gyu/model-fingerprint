@@ -64,5 +64,5 @@ $$\text{Pairwise Interaction Effect of } (x_k, x_l) = \frac{1}{N^2} \sum^{N}_{i=
 - Higher order interactions between features are not demonstrated.
 - The sign (direction) of feature influence is not shown.
 
-## Further TODO
+## Future TODO
 - [ ] compatibility with classifier
