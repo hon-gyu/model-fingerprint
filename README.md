@@ -55,8 +55,7 @@ Here is a plot demonstrating the partial dependence function, fitted regression 
 
 The calculation of pairwise interaction prediction effects is similar but this time a joint partial dependence function for both features are calculated, denoted as $f_{k, l}$. Following a similar line of thought of H-statistics, the pairwise interaction effect is defined by the de-meaned joint partial prediction minus the individual de-meanded partial predictions:
 
-$$\text{Pairwise Interaction Effect of } (x_k, x_l) = \frac{1}{N^2} \sum^{N}_{i=1}\sum^{N}_{j=1} abs(f_{k, l} (x_{k, i}, x_{l, j}) - f_k (x_{k, i}) - f_l (x_{l, j}) )$$
-
+$$\text{Pairwise Interaction Effect of } (x_k, x_l) = \frac{1}{N^2} \sum^{N}_ {i=1} \sum^{N}_ {j=1} abs(f_{k, l} (x_{k, i}, x_{l, j}) - f_k (x_{k, i}) - f_l (x_{l, j}))$$
 
 ## Drawback
 
